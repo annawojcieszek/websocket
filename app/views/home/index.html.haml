@@ -1,0 +1,7 @@
+#chat_history
+  - @messages.each do |message|
+    %div
+      %span= message.body
+= simple_form_for @message do |f|
+  = f.input :body, input_html: { id: "new_message" }
+  #send_message= f.button :submit
